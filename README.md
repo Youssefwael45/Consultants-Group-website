@@ -12,7 +12,7 @@ This repository contains the static files for the official website of Consultant
 
 ## Live Website
 
-You can view the website here: [GitHub Pages](https://yourusername.github.io/repositoryname/)
+You can view the website here: [GitHub Pages](https://youssefwael45.github.io/Consultants-Group-website/)
 
 ## About Us
 
