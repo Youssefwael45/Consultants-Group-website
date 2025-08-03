@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- The lang and dir attributes will be managed by JavaScript -->
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate-key="pageTitle">مجمع الاستشاريين - الاستشارات الهندسية والتقييم</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!-- Navigation Bars -->
+<nav class="top-nav">
+    <div class="container">
+        <div class="nav-content">
+            <div class="nav-contact-info">
+                <span>📧 info@consultants-group.com</span>
+                <span>📞 01068021167</span>
+            </div>
+            <div class="social-links">
+                 <a href="https://wa.me/201068021167">whatsapp</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="main-nav">
+    <div class="container">
+        <a class="logo" href="index.html" data-translate-key="logoText">مجمع الاستشاريين</a>
+        
+        <!-- Collapsible Menu Container -->
+        <div class="nav-menu-container">
+            <a href="#" class="close-icon"><i class="fas fa-times"></i></a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" data-translate-key="navAbout">من نحن</a></li>
+                <li class="dropdown-container">
+                    <a>
+                        <span data-translate-key="navServices">خدماتنا</span> 
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="service-land.html" data-translate-key="serviceLand">الأراضي والمباني</a>
+                        <a href="service-machinery.html" data-translate-key="serviceMachinery">الآلات والمعدات</a>
+                        <a href="service-goods.html" data-translate-key="serviceGoods">البضائع</a>
+                        <a href="feasibility-studies.html" data-translate-key="feasibilityStudies">دراسات الجدوى</a>
+                    </div>
+                </li>
+                <li><a href="project.html" data-translate-key="navProjects">المشاريع</a></li>
+                <li><a href="certification.html" data-translate-key="navCertifications">الشهادات</a></li>
+                <li><a href="index.html#clients" data-translate-key="navClients">عملاؤنا</a></li>
+                <li><a href="index.html#contact" data-translate-key="navContact">اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <!-- All right-side icons are now in this single container -->
+        <div class="nav-icons">
+            <a href="#" id="toggle-lang">🌐</a>
+            <a class="nav-logo-icon">
+                <img src="image/logo-removebg-preview.png" alt="Consultants Group Small Logo">
+            </a>
+            <button class="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Banner with Video Background -->
+    <section class="hero-banner">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop id="hero-video">
+            <source src="image/1992-153555258.mp4" type="video/mp4" playsinline>
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="banner-content">
+                <h1 data-translate-key="heroTitle">مرحباً بكم في مجمع الاستشاريين</h1>
+                <p data-translate-key="heroSubtitle">الاستشارات الهندسية لتقييم الأصول والعقارات والمشاريع</p>
+                <p class="arabic-subtitle" data-translate-key="heroDescription">شركة مجمع الاستشاريين ( شركة مساهمة مصرية ) تعمل في مجال تقديم الخدمات الاستشارية الهندسية</p>
+                <a href="#services-main" class="btn-shop" data-translate-key="heroButton">استكشف خدماتنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+     
+    <section id="services-main" class="categories">
+        <div class="container">
+            <h2 class="scroll-animate" data-translate-key="mainServicesTitle">خدماتنا الرئيسية</h2>
+            <div class="category-cards scroll-animate">
+                <a href="service-land.html" class="card">
+                    <img src="image/land.jpg" alt="Lands and Buildings" id="img-building">
+                    <h3 data-translate-key="serviceLand">الأراضي والمباني</h3>
+                </a>
+                <a href="service-machinery.html" class="card">
+                    <img src="image/industrial.jpg" alt="Machinery and Equipment" id="img-machinery">
+                    <h3 data-translate-key="serviceMachinery">الآلات والمعدات</h3>
+                </a>
+                <a href="service-goods.html" class="card">
+                    <img src="image/supplies.webp" alt="Goods" id="img-goods">
+                    <h3 data-translate-key="serviceGoods">البضائع</h3>
+                </a>
+                 <a href="feasibility-studies.html" class="card">
+                    <img src="image/landconltant.webp" alt="Feasibility Studies" id="img-goods">
+                    <h3 data-translate-key="Feasibility-Studies">دراسات الجدوى</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-banner">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text scroll-animate">
+                    <h2 data-translate-key="aboutTitle">من نحن</h2>
+                    <p data-translate-key="aboutP1">
+                        شركة مجمع الاستشاريين (شركة مساهمة مصرية) تعمل في مجال تقديم الخدمات الاستشارية الهندسية. تأسست الشركة عام 1985 طبقاً للقانون رقم 159 لسنة 1981 وتمارس نشاطها منذ ذلك التاريخ.
+                    </p>
+                    <ul>
+                        <li data-translate-key="aboutLi1"><i class="fas fa-certificate"></i>مسجلة كـ بيت خبرة لدى البنك المركزي المصري في كافة التخصصات "رقم 2".</li>
+                        <li data-translate-key="aboutLi2"><i class="fas fa-building"></i>مسجلة كـ بيت خبرة لدى هيئة الرقابة المالية في مجال التقييم العقاري "رقم 11".</li>
+                        <li data-translate-key="aboutLi3"><i class="fas fa-user-tie"></i>مجلس الإدارة للشركة مسجل في سجل خبراء التقييم العقاري لدى هيئة الرقابة المالية (رقم 190).</li>
+                    </ul>
+                </div>
+                <div class="about-image scroll-animate">
+                    <img src="image/logo.jpg" alt="شعار مجمع الاستشاريين" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="scroll-animate" data-translate-key="whyUsTitle">لماذا تختار مجمع الاستشاريين؟</h2>
+            <p class="scroll-animate" data-translate-key="whyUsSubtitle">6 أسباب مقنعة لاختيارنا</p>
+            <div class="service-cards scroll-animate">
+                <div class="card">
+                    <span>🏦</span>
+                    <h3 data-translate-key="feature1Title">تسجيل متعدد التخصصات</h3>
+                    <p data-translate-key="feature1Desc">مسجلون في البنك المركزي المصري في جميع التخصصات الثلاثة (الأراضي/المباني، الآلات/المعدات، والبضائع)</p>
+                </div>
+                <div class="card">
+                    <span>🕒</span>
+                    <h3 data-translate-key="feature2Title">40+ عاماً من الخبرة</h3>
+                    <p data-translate-key="feature2Desc">تأسست عام 1985 وأعدت أكثر من 4,000 تقرير فني في مختلف القطاعات</p>
+                </div>
+                <div class="card">
+                    <span>📜</span>
+                    <h3 data-translate-key="feature3Title">اعتماد مزدوج</h3>
+                    <p data-translate-key="feature3Desc">مسجلون لدى البنك المركزي المصري والهيئة العامة للرقابة المالية لتقييم العقارات</p>
+                </div>
+                <div class="card">
+                    <span>🤝</span>
+                    <h3 data-translate-key="feature4Title">عملاء مرموقون</h3>
+                    <p data-translate-key="feature4Desc">نعمل مع البنوك الكبرى والجهات الحكومية والهيئات القومية</p>
+                </div>
+                <div class="card">
+                    <span>📊</span>
+                    <h3 data-translate-key="feature5Title">نطاق خدمات شامل</h3>
+                    <p data-translate-key="feature5Desc">تقييم الأراضي، العقارات، المصانع، البضائع، والمركبات</p>
+                </div>
+                <div class="card">
+                    <span>⚖️</span>
+                    <h3 data-translate-key="feature6Title">الشفافية والامتثال القانوني</h3>
+                    <p data-translate-key="feature6Desc">توثيق كامل للسجلات التجارية والضريبية والامتثال للوائح</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2 class="scroll-animate" data-translate-key="clientsTitle">عملاؤنا</h2>
+            <div class="client-categories">
+                <div class="client-category scroll-animate">
+                    <h3 data-translate-key="clientsBanks">البنوك</h3>
+                    <div class="client-list">
+                        <div class="client-item scroll-animate">
+                            <img src="image/alhalybank.webp" alt="البنك الأهلي المصري">
+                            <span data-translate-key="clientAhlyBank">البنك الأهلي المصري</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/barakabank.webp" alt="بنك البركة مصر">
+                            <span data-translate-key="clientBarakaBank">بنك البركة مصر</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/alswesbank.webp" alt="بنك قناة السويس">
+                            <span data-translate-key="clientSuezCanalBank">بنك قناة السويس</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download.webp" alt="بنك فيصل الإسلامي">
+                            <span data-translate-key="clientFaisalBank">بنك فيصل الإسلامي</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download (1).webp" alt="المصرف المتحد">
+                            <span data-translate-key="clientUnitedBank">المصرف المتحد</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/cairobank.webp" alt="بنك القاهرة">
+                            <span data-translate-key="clientCairoBank">بنك القاهرة</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/zara3ybank.webp" alt="البنك الزراعي المصري">
+                            <span data-translate-key="clientAgriculturalBank">البنك الزراعي المصري</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/nasrbank.webp" alt="بنك ناصر الاجتماعي">
+                            <span data-translate-key="clientNasserBank">بنك ناصر الاجتماعي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-category scroll-animate">
+                    <h3 data-translate-key="clientsGov">الجهات الحكومية</h3>
+                    <div class="client-list">
+                         <div class="client-item scroll-animate">
+                            <img src="image/download (2).webp" alt="الشركة القابضة للصناعات المعدنية">
+                            <span data-translate-key="clientMetalIndustries">الشركة القابضة للصناعات المعدنية</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download (3).webp" alt="الشركة القومية لإدارة الأصول والاستثمار">
+                            <span data-translate-key="clientNationalAssetManagement">الشركة القومية لإدارة الأصول والاستثمار</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download (4).webp" alt="الشركة القابضة للقطن والغزل والنسيج">
+                            <span data-translate-key="clientCottonTextile">الشركة القابضة للقطن والغزل والنسيج</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download (5).webp" alt="الهيئة العامة للبترول">
+                            <span data-translate-key="clientEGPC">الهيئة العامة للبترول</span>
+                        </div>
+                        <div class="client-item scroll-animate">
+                            <img src="image/download (6).webp" alt="الشركة المصرية القابضة للغازات الطبيعية">
+                            <span data-translate-key="clientEGAS">الشركة المصرية القابضة للغازات الطبيعية "إيجاس"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Us Banner -->
+    <section id="contact-banner" class="contact-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1 data-translate-key="contactBannerTitle">اتصل بنا</h1>
+                <p data-translate-key="contactBannerDesc">
+                    هل لديك أسئلة حول خدماتنا؟ تحتاج إلى مساعدة؟ أو ترغب في تقديم ملاحظات؟
+                    نحن هنا لمساعدتك. تواصل معنا باستخدام النموذج أدناه أو اتصل بنا.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contain">
+            <h2 class="scroll-animate" data-translate-key="contactFormTitle">تواصل معنا</h2>
+            <div class="contact-wrapper">
+                <div class="contact-map scroll-animate">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.049345627696!2d31.3218392!3d30.06412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815858cf906d7%3A0x29027ae5cf071fb2!2sConsultants%20Group!5e0!3m2!1sen!2seg!4v1752788355676!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-info scroll-animate">
+                    <h3 data-translate-key="contactInfoTitle">معلومات التواصل</h3>
+                    <p><strong data-translate-key="contactInfoAddressLabel">العنوان:</strong> <span data-translate-key="contactInfoAddress">48 ش يوسف عباس - مدينة نصر - الدور الثاني - شقة (22) - القاهرة - مصر</span></p>
+                    <p><strong data-translate-key="contactInfoEmailLabel">البريد الالكترونى:</strong> <a href="mailto:info@consultants-group.com">info@consultants-group.com</a></p>
+                    <p><strong data-translate-key="contactInfoPhoneLabel">تليفون/فاكس:</strong> <a href="tel:+20222606065">22606065</a> - <a href="tel:+20222606066">22606066</a></p>
+                    <p><strong data-translate-key="contactInfoDirectLabel">الاتصال المباشر:</strong> <span data-translate-key="contactInfoDirect">مهندس / مصطفى حـســن فراج : <a href="tel:+201068021167">01068021167</a></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

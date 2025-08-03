@@ -1,0 +1,110 @@
+/* --- Certification Page Specific Styles --- */
+
+/* Hero Section for Certification Page */
+.certification-hero {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certification-hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.certification-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 50, 0.6); 
+}
+
+.certification-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 50px;
+    font-weight: bold;
+    animation: pulse 2s ease-in-out infinite; /* Keep pulse animation */
+}
+
+/* Main Content Area */
+.certification-content-container {
+    padding: 60px 20px;
+    text-align: center; /* Center align section title */
+}
+
+.certification-content-container h2 {
+    font-size: 36px;
+    color: #000080;
+    margin-bottom: 20px;
+}
+.certification-content-container p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certification-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 20px; /* Space below content */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certification-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Use contain to show full certificate */
+    display: block;
+    padding: 15px; /* Padding around image */
+    box-sizing: border-box;
+}
+
+.certification-card h3 {
+    font-size: 20px;
+    color: #000080;
+    padding: 0 15px 5px;
+    margin: 0;
+}
+
+.certification-card p {
+    font-size: 15px;
+    color: #666;
+    padding: 0 15px;
+    line-height: 1.5;
+    margin: 0;
+}

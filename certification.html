@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate-key="certPageTitle">الشهادات والاعتمادات - مجمع الاستشاريين</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="certification-styles.css" /> <!-- Link to new certification-specific styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!-- Navigation Bars -->
+<nav class="top-nav">
+    <div class="container">
+        <div class="nav-content">
+            <div class="nav-contact-info">
+                <span>📧 info@consultants-group.com</span>
+                <span>📞 01068021167</span>
+            </div>
+            <div class="social-links">
+                <a href="https://wa.me/201068021167">whatsapp</a>
+              
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="main-nav">
+    <div class="container">
+        <a class="logo" href="index.html" data-translate-key="logoText">مجمع الاستشاريين</a>
+        
+        <!-- Collapsible Menu Container -->
+        <div class="nav-menu-container">
+            <a href="#" class="close-icon"><i class="fas fa-times"></i></a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" data-translate-key="navAbout">من نحن</a></li>
+                <li class="dropdown-container">
+                    <a>
+                        <span data-translate-key="navServices">خدماتنا</span> 
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="service-land.html" data-translate-key="serviceLand">الأراضي والمباني</a>
+                        <a href="service-machinery.html" data-translate-key="serviceMachinery">الآلات والمعدات</a>
+                        <a href="service-goods.html" data-translate-key="serviceGoods">البضائع</a>
+                        <a href="feasibility-studies.html" data-translate-key="feasibilityStudies">دراسات الجدوى</a>
+                    </div>
+                </li>
+                <li><a href="project.html" data-translate-key="navProjects">المشاريع</a></li>
+                <li><a href="certification.html" data-translate-key="navCertifications">الشهادات</a></li>
+                <li><a href="index.html#clients" data-translate-key="navClients">عملاؤنا</a></li>
+                <li><a href="index.html#contact" data-translate-key="navContact">اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <!-- All right-side icons are now in this single container -->
+        <div class="nav-icons">
+            <a href="#" id="toggle-lang">🌐</a>
+            <a class="nav-logo-icon">
+                <img src="image/logo-removebg-preview.png" alt="Consultants Group Small Logo">
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Certifications Hero Section -->
+    <section class="certification-hero">
+        <div class="certification-hero-overlay"></div>
+        <video autoplay muted loop playsinline class="certification-hero-video">
+            <source src="image/paper.mp4" type="video/mp4"> <!-- YOUR VIDEO HERE -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <h1 class="scroll-animate" data-translate-key="certificationHeroTitle">شهاداتنا واعتماداتنا</h1>
+        </div>
+    </section>
+
+    <!-- Certifications Content Section -->
+    <main class="certification-content-container container">
+        <h2 class="scroll-animate" data-translate-key="certificationContentMainTitle">فخورون باعتماداتنا ومؤهلاتنا</h2>
+        <p class="scroll-animate" data-translate-key="certificationContentDesc">
+            يلتزم مجمع الاستشاريين بأعلى معايير الجودة والاحترافية. تضمن شهاداتنا واعتماداتنا من الهيئات الرقابية الرائدة أنك تتعامل مع فريق من الخبراء المؤهلين والموثوقين.
+        </p>
+        <div class="certification-grid">
+            <div class="certification-card scroll-animate">
+                <img src="image/bankmarkzy.webp" alt="Central Bank Registration Certificate">
+                <h3 data-translate-key="cert1Title">شهادة تسجيل البنك المركزي</h3>
+                <p data-translate-key="cert1Desc">مسجلون كبيت خبرة رقم 2 لدى البنك المركزي المصري.</p>
+            </div>
+            <div class="certification-card scroll-animate">
+                <img src="image/w1.webp" alt="FRA License">
+                <h3 data-translate-key="cert2Title">ترخيص هيئة الرقابة المالية</h3>
+                <p data-translate-key="cert2Desc">مسجلون لدى هيئة الرقابة المالية في التقييم العقاري رقم 11.</p>
+            </div>
+             <div class="certification-card scroll-animate">
+                <img src="image/taxes.jpg" alt="Tax Card">
+                <h3 data-translate-key="cert4Title">البطاقة الضريبية</h3>
+                <p data-translate-key="cert4Desc">توضيح للبطاقة الضريبية وامتثال الشركة الضريبي.</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
