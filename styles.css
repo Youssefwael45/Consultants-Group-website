@@ -258,6 +258,7 @@ body {
         width: 100%;
         align-items: center; /* Center the list items horizontally */
         padding: 0 20px;
+        box-sizing: border-box; /* THIS IS THE FIX: Prevents overflow */
     }
 
     .close-icon {
@@ -275,16 +276,17 @@ body {
     }
     
     .nav-menu li {
-        width: 80%;
-        margin-bottom: 10px;
-        display: flex; /* This ensures the <a> tag inside can be full width */
+        width: 100%;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
     
     .nav-menu a {
         width: 100%;
-        padding: 10px 15px;
+        padding: 15px;
         border-bottom: 1px solid #eee;
-        border-radius: 5px; 
+        border-radius: 0; 
         text-align: center; /* Center the text inside the link */
     }
 
@@ -314,23 +316,34 @@ body {
         border-radius: 0;
         display: none;
         border-bottom: 1px solid #eee;
+        background-color: #f8f9fa;
     }
 
     .dropdown-container:hover .dropdown-menu {
         display: none;
     }
-    .dropdown-container.active .dropdown-menu {
-        display: block;
-    }
+
+    /* REMOVED .dropdown-container.active .dropdown-menu to fix flicker bug */
     
     .dropdown-menu a {
         border-bottom: none;
         padding-top: 12px;
         padding-bottom: 12px;
-        background-color: #f8f9fa;
+        background-color: transparent;
+        font-size: 15px;
+        color: #333;
     }
+    
+    [dir="rtl"] .dropdown-menu a {
+        padding-right: 40px;
+    }
+
+    [dir="ltr"] .dropdown-menu a {
+        padding-left: 40px;
+    }
+
     .dropdown-menu a:hover {
-        background-color: #f0f0f0;
+        background-color: #e9ecef;
     }
 }
 
@@ -445,6 +458,7 @@ body {
 
 .categories .card {
     width: 275px;
+    max-width: 100%;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -481,26 +495,27 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Desktop Layout (Default) */
 .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    grid-auto-rows: min-content; /* THIS IS THE FIX: Prevents rows from stretching */
+    gap: 20px 50px; /* 20px between text rows, 50px between columns */
+    align-items: center; /* Vertically center content in the rows */
 }
 
 [dir="rtl"] .about-content {
-    flex-direction: row-reverse;
+    grid-template-columns: 450px 1fr;
 }
 
-[dir="ltr"] .about-content {
-    flex-direction: row;
-}
+/* Explicitly place grid items */
+#about-intro-text { grid-column: 1; }
+#about-list-text  { grid-column: 1; }
+.about-image      { grid-column: 2; grid-row: 1 / 3; }
 
-.about-text {
-    flex: 1;
-    max-width: 600px;
-}
+[dir="rtl"] #about-intro-text { grid-column: 2; }
+[dir="rtl"] #about-list-text  { grid-column: 2; }
+[dir="rtl"] .about-image      { grid-column: 1; }
 
 .about-text h2 {
     font-size: 38px;
@@ -519,19 +534,14 @@ body {
     background-color: #c00000;
 }
 
-[dir="ltr"] .about-text h2::after {
-    left: 0;
-}
-
-[dir="rtl"] .about-text h2::after {
-    right: 0;
-}
+[dir="ltr"] .about-text h2::after { left: 0; }
+[dir="rtl"] .about-text h2::after { right: 0; }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.7;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Remove bottom margin to let gap property handle spacing */
 }
 
 .about-text ul {
@@ -552,16 +562,10 @@ body {
     font-size: 20px;
 }
 
-[dir="ltr"] .about-text ul li .fas {
-    margin-right: 10px;
-}
-
-[dir="rtl"] .about-text ul li .fas {
-    margin-left: 10px;
-}
+[dir="ltr"] .about-text ul li .fas { margin-right: 10px; }
+[dir="rtl"] .about-text ul li .fas { margin-left: 10px; }
 
 .about-image {
-    flex: 1;
     max-width: 450px;
     text-align: center;
 }
@@ -571,6 +575,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
 
 /* --- Why Choose Us Section Styles --- */
 .services {
@@ -601,7 +606,7 @@ body {
 }
 
 .services .card {
-    width: calc(20% - 20px);
+    width: calc(30% - 20px);
     min-width: 250px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -673,6 +678,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1000px;
+    box-sizing: border-box; /* THIS FIX PREVENTS OVERFLOW */
 }
 
 .client-category h3 {
@@ -828,12 +834,69 @@ body {
     }
 }
 
+/* ====================================================== */
+/* === COMPREHENSIVE MOBILE STYLES (992px and below) ==== */
+/* ====================================================== */
+@media (max-width: 992px) {
+    /* --- About Us Section: Stack on Mobile --- */
+    .about-content {
+        display: block; /* Override the grid layout */
+        text-align: center;
+    }
 
-@media (max-width: 768px) {
-    .services .card {
-        width: 100%;
+    .about-image {
+        margin: 30px auto;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+
+    /* Center the underline for the heading */
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Center the list items */
+    .about-text ul {
+        display: inline-block;
+        text-align: left;
+    }
+    [dir="rtl"] .about-text ul {
+        text-align: right;
     }
 }
+
+
+/* ====================================================== */
+/* === COMPREHENSIVE MOBILE STYLES (768px and below) ==== */
+/* ====================================================== */
+@media (max-width: 768px) {
+    /* --- General Font Size Adjustments for Readability --- */
+    .hero-banner h1,
+    .contact-banner .banner-content h1 {
+        font-size: 42px;
+    }
+
+    .categories h2, .services h2, .clients h2, .contact h2, .about-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-banner p {
+        font-size: 18px;
+    }
+
+    /* --- Contact Section: Ensure stacking --- */
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .services .card {
+        width: 100%; /* Make cards full width on small mobile */
+    }
+}
+
 
 @media (max-width: 576px) {
     .hero-banner h1 {
@@ -844,5 +907,8 @@ body {
     }
     .arabic-subtitle {
         font-size: 1.1rem;
+    }
+    .main-nav .logo {
+        font-size: 22px; 
     }
 }
