@@ -31,7 +31,7 @@
         
         <!-- Collapsible Menu Container -->
         <div class="nav-menu-container">
-            <a href="#" class="close-icon"><i class="fas fa-times"></i></a>
+            <a href="#" class="close-icon" title="Close menu"><i class="fas fa-times"></i></a>
             <ul class="nav-menu">
                 <li><a href="index.html#about" data-translate-key="navAbout">من نحن</a></li>
                 <li class="dropdown-container">
@@ -116,19 +116,26 @@
     <section id="about" class="about-banner">
         <div class="container">
             <div class="about-content">
-                <div class="about-text scroll-animate">
+                <!-- Part 1: Heading and Intro Paragraph -->
+                <div class="about-text" id="about-intro-text">
                     <h2 data-translate-key="aboutTitle">من نحن</h2>
                     <p data-translate-key="aboutP1">
                         شركة مجمع الاستشاريين (شركة مساهمة مصرية) تعمل في مجال تقديم الخدمات الاستشارية الهندسية. تأسست الشركة عام 1985 طبقاً للقانون رقم 159 لسنة 1981 وتمارس نشاطها منذ ذلك التاريخ.
                     </p>
+                </div>
+
+                <!-- Part 2: Image (for reordering) -->
+                <div class="about-image scroll-animate">
+                    <img src="image/logo.jpg" alt="شعار مجمع الاستشاريين" />
+                </div>
+
+                <!-- Part 3: List of Registrations -->
+                <div class="about-text" id="about-list-text">
                     <ul>
                         <li data-translate-key="aboutLi1"><i class="fas fa-certificate"></i>مسجلة كـ بيت خبرة لدى البنك المركزي المصري في كافة التخصصات "رقم 2".</li>
                         <li data-translate-key="aboutLi2"><i class="fas fa-building"></i>مسجلة كـ بيت خبرة لدى هيئة الرقابة المالية في مجال التقييم العقاري "رقم 11".</li>
                         <li data-translate-key="aboutLi3"><i class="fas fa-user-tie"></i>مجلس الإدارة للشركة مسجل في سجل خبراء التقييم العقاري لدى هيئة الرقابة المالية (رقم 190).</li>
                     </ul>
-                </div>
-                <div class="about-image scroll-animate">
-                    <img src="image/logo.jpg" alt="شعار مجمع الاستشاريين" />
                 </div>
             </div>
         </div>
@@ -264,7 +271,7 @@
             <h2 class="scroll-animate" data-translate-key="contactFormTitle">تواصل معنا</h2>
             <div class="contact-wrapper">
                 <div class="contact-map scroll-animate">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.049345627696!2d31.3218392!3d30.06412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815858cf906d7%3A0x29027ae5cf071fb2!2sConsultants%20Group!5e0!3m2!1sen!2seg!4v1752788355676!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.049345627696!2d31.3218392!3d30.06412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815858cf906d7%3A0x29027ae5cf071fb2!2sConsultants%20Group!5e0!3m2!1sen!2seg!4v1752788355676!5m2!1sen!2seg" width="600" height="450" class="contact-map-iframe" allowfullscreen="" loading="lazy" title="Consultants Group Location"></iframe>
                 </div>
                 <div class="contact-info scroll-animate">
                     <h3 data-translate-key="contactInfoTitle">معلومات التواصل</h3>
